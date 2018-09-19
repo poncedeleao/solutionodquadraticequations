@@ -1,0 +1,80 @@
+package solutionsOfQuadraticsSolutions;
+	
+
+	import javax.swing.JOptionPane;
+	
+
+	public class Solution {
+	  
+	  //Programa criado para encontrar os zeros,x do vértice e y do vertice de uma função quadrática. 
+			
+		public static void main(String[] args) {
+			
+			String a;
+			String b;
+			String c;
+			double a1;
+			double b1;
+			double c1;
+			double x1;
+			double x2;
+			double xv;
+			double yv;
+			double raizd;
+			
+			a = JOptionPane.showInputDialog("Digite o coificiente a");
+			b = JOptionPane.showInputDialog("Digite o coificiente b");
+			c = JOptionPane.showInputDialog("Digite o coificiente c");
+			
+			  a1 = Double.parseDouble(a);
+		    b1 = Double.parseDouble(b);
+		    c1 = Double.parseDouble(c);
+		    
+		    
+		    
+		 Double delta = ((b1 * b1) - ((4 * a1 * c1)));
+		    
+		      if (delta < 0) {
+		         
+		    	System.out.println("Não existem rízes reais !  " + "Valor do delta: " + delta);
+	
+
+		    	
+		      } else if (delta >= 0) { 
+		    
+		    	 
+		    	raizd = Math.sqrt(delta);
+		    	
+		    	//x= -b +- sqrt de delta sobre 2a
+		    	x1 = (-(b1) + Math.sqrt(delta)) / (2 * a1);
+		    	x2 = (-(b1) - Math.sqrt(delta)) / (2 * a1);
+		        
+		        
+		        
+		        
+		        
+		        System.out.println("Valor do delta é: " + delta);
+		        System.out.println("Valor da raiz de delta é: " + raizd);
+		        System.out.println("O zero da função quadrática x1 será:  " + x1);
+		        System.out.println("O zero da função quadrática x2 será:  " + x2);     
+		     }
+		
+		    
+		       //xv = -b/2a ======= yv = -delta/4a
+		        xv = (-(b1) / (2 *a1));
+		        yv = (-(delta)) / (4 * a1);
+		    
+		    System.out.println("O X do vétice é: " + xv);
+		    System.out.println("O Y do vétice é: " + yv);
+		     
+		     
+		    }
+			
+	
+
+			
+			
+		   
+		
+	}
+
